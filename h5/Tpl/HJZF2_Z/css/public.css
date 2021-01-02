@@ -1,0 +1,90 @@
+/*css通用样式*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+    margin: 0;
+    padding: 0;
+}
+body,button,input,select,textarea{
+    font-weight: normal;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei',"微软雅黑" ,"宋体","Arial",HELVETICA;
+    position:relative;
+}
+input, textarea {
+    border: 1px #ccc solid;
+    background: #ffffff;
+    outline: none;
+}
+img {
+    border:none;
+    vertical-align:middle;
+}
+a{text-decoration: none;color: #868585;}
+
+.clear {
+    clear: both;
+    overflow: hidden;
+}
+.rt{float: right;}
+.lf{float: left;}
+.ellipsis_one{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.ellipsis_two{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.ellipsis_three{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.ellipsis_four{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:  -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.flex{
+    display: -moz-flex;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: -webkit-box;display: flex;
+}
+.box-sizing{box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box}
+.detail_editor img{max-width: 100%}
+.word_break{word-wrap: break-word;word-break: break-all;}
+/*图片最大100%，并居中*/
+.img-fluid{
+    max-width: 100%;
+    display: block;
+    margin:auto;
+}
+.row_little{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.fl{
+    float: left !important;
+}
+.fr{
+    float: right !important;
+}
+.tac{
+    text-align: center;
+}
+.tal{
+    text-align: left;
+}
+.tar{
+    text-align: right;
+}

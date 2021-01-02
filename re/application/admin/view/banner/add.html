@@ -1,0 +1,64 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Image')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-image" data-rule="required" class="form-control" size="50" name="row[image]" type="text">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-image"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-image"></ul>
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Weigh')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-weigh" data-rule="required" class="form-control" name="row[weigh]" type="number" value="0">-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Genre')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+<!--            <select  id="c-genre" data-rule="required" class="form-control selectpicker" name="row[genre]">-->
+<!--                {foreach name="genreList" item="vo"}-->
+<!--                    <option value="{$key}" {in name="key" value="0"}selected{/in}>{$vo}</option>-->
+<!--                {/foreach}-->
+<!--            </select>-->
+
+            <div class="radio">
+                <label for="row[genre]-0"><input id="row[genre]-0" name="row[genre]" type="radio" value="0" onchange="goCheck(0)" checked/> 不跳转</label>
+                <label for="row[genre]-1"><input id="row[genre]-1" name="row[genre]" type="radio" value="1" onchange="goCheck(1)"/> 跳转新闻</label>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group" id="box" style="display: none;">
+        <label class="control-label col-xs-12 col-sm-2">{:__('News_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-news_id" data-rule="required" data-source="news/index" data-field="title" data-primary-key="news_id" class="form-control selectpage" name="row[news_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    function goCheck(key) {
+        if (key == 1) {
+            $("#box").css("display","block");
+        }
+        else if (key == 0) {
+            $("#box").css("display","none");
+        }
+    }
+</script>
